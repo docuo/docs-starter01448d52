@@ -4,7 +4,7 @@
   "themeConfig": {
     "navbar": {
       "title": "",
-      "logo": "image/logo.png",
+      "logo": "image/logo_black.png",
       "items": [
         {
           "type": "docSidebar",
@@ -19,7 +19,7 @@
       ]
     },
     "footer": {
-      "logo": "image/logo.png",
+      "logo": "image/logo_black.png",
       "copyright": "Copyright @2024 SPREADING. All Rights Reserved",
       "links": [
         {
