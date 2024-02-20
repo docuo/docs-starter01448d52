@@ -1,5 +1,6 @@
 {
-  "title": "Docuo - documentation",
+  "title": "Documentation - Docuo",
+  "description": "Start building modern documentation site in 4 steps - Docuo",
   "favicon": "image/favicon.ico",
   "themeConfig": {
     "navbar": {
