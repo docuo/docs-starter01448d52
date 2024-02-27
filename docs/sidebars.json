@@ -42,9 +42,25 @@
       "label": "Editing docs",
       "items": [
         {
-          "type": "doc",
-          "id": "editing-docs/manange-your-docs",
-          "label": "Manange your docs"
+          "type": "category",
+          "label": "Managing docs",
+          "items": [
+            {
+              "type": "doc",
+              "id": "editing-docs/managing-docs/sidebar",
+              "label": "Sidebar"
+            },
+            {
+              "type": "doc",
+              "id": "editing-docs/managing-docs/docs-multi-instance",
+              "label": "Docs Multi-instance"
+            },
+            {
+              "type": "doc",
+              "id": "editing-docs/managing-docs/docs-versioning",
+              "label": "Docs versioning"
+            }
+          ]
         },
         {
           "type": "doc",
@@ -103,6 +119,17 @@
           "type": "doc",
           "id": "account-management/workspace-settings",
           "label": "Workspace settings"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Engaging users",
+      "items": [
+        {
+          "type": "doc",
+          "id": "engaging-users/search",
+          "label": "Search"
         }
       ]
     }
