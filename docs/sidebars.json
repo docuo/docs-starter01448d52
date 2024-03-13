@@ -82,6 +82,11 @@
           "type": "doc",
           "id": "customizing/customize-through-platform",
           "label": "Customize through platform"
+        },
+        {
+          "type": "doc",
+          "id": "customizing/custom-domain",
+          "label": "Custom domain"
         }
       ]
     },
