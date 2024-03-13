@@ -2,6 +2,19 @@
   "title": "Documentation - Docuo",
   "description": "Start building modern documentation site in 4 steps - Docuo",
   "favicon": "image/favicon.ico",
+  "search": {
+    "algolia": {
+      "appId": "7O5IGBZIH0",
+      "apiKey": "51da38e81d9433c029909f08ce00c7de",
+      "indexName": "uo-spreading"
+    }
+  },
+  "openapi": {
+    "petstore": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
+      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
+    }
+  },
   "themeConfig": {
     "navbar": {
       "title": "",
