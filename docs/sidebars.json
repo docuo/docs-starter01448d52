@@ -140,6 +140,11 @@
           "type": "doc",
           "id": "engaging-users/search",
           "label": "Search"
+        },
+        {
+          "type": "doc",
+          "id": "engaging-users/analytics",
+          "label": "Analytics"
         }
       ]
     },
