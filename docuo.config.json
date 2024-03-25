@@ -16,9 +16,17 @@
     }
   },
   "themeConfig": {
+    "colorMode": {
+      "defaultMode": "dark",
+      "disableSwitch": false,
+      "respectPrefersColorScheme": false
+    },
     "navbar": {
       "title": "",
-      "logo": "image/logo_black.png",
+      "logo": {
+        "light": "image/logo_light.png",
+        "dark": "image/logo_dark.png"
+      },
       "items": [
         {
           "type": "docSidebar",
@@ -33,7 +41,10 @@
       ]
     },
     "footer": {
-      "logo": "image/logo_black.png",
+      "logo": {
+        "light": "image/logo_light.png",
+        "dark": "image/logo_dark.png"
+      },
       "copyright": "Copyright @2024 SPREADING. All Rights Reserved",
       "links": [
         {
