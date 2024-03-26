@@ -561,3 +561,27 @@ Example configuration:
 ```
 
 <Warning title="Warning">With respectPrefersColorScheme: true, the defaultMode is overridden by user system preferences.</Warning>
+
+### Primary Colors
+
+You can customize your primary colors within the `colors` object.
+
+Accepted fields:
+
+| Name           | Type     | Default     | Description                                          |
+| -------------- | -------- | ----------- | ---------------------------------------------------- |
+| `primaryLight` | `string` | `'#1ABD00'` | Primary color for highlighted content in light mode. |
+| `primaryDark`  | `string` | `'#05EC07'` | Primary color for highlighted content in dark mode.  |
+
+Example configuration:
+
+```json docuo.config.json
+{
+  "themeConfig": {
+    "colors": {
+      "primaryLight": "#1ABD00",
+      "primaryDark": "#05EC07"
+    }
+  }
+}
+```
