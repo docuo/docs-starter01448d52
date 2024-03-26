@@ -5,7 +5,7 @@
   [**Configuration**](../Getting%20started/Configuration.mdx) for examples.
 </Note>
 
-## Overview 2
+## Overview
 
 `docuo.config.json` contains configurations for your site and is placed in the root directory of your site.
 This file is run in Node.js and should returns a standard json format of content.
@@ -35,7 +35,7 @@ Here's an example:
 
 - Type: `string`
 
-Title for your website. Will be used in metadata and as browser tab title.
+Title for your website. It will be used in metadata and as browser tab title.
 
 <CodeGroup>
 
@@ -121,7 +121,7 @@ Example:
 
 - Type: `string | undefined`
 
-Path to your site favicon; must be a URL that can be used in link's href. For example, if your favicon is in `static/image/favicon.ico`:
+Path to your site favicon. It must be a URL that can be used in link's href. For example, if your favicon is in `static/image/favicon.ico`:
 
 <Tip title="TIP">
   The default `static` direcory is a static directory. The files under the paths
@@ -276,8 +276,6 @@ Example configuration:
       "items": [
         {
           "to": "/introduction",
-          // Only one of "to" or "href" should be used
-          // "href": "https://spreading.ai/blog",
           "label": "Introduction",
           "position": "left"
         }
@@ -416,6 +414,21 @@ Example configuration:
       "logo": "image/logo.png",
       "copyright": "xxx",
       "caption": "xxx"
+    }
+  }
+}
+```
+
+If your website has configured `dark mode` and you have another logo for `dark mode`, you can also configure your footer logo like this:
+
+```json docuo.config.json
+{
+  "themeConfig": {
+    "footer": {
+      "logo": {
+        "light": "image/logo_light.png",
+        "dark": "image/logo_dark.png"
+      }
     }
   }
 }
