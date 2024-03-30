@@ -166,6 +166,27 @@
           "type": "doc",
           "id": "using-openapi/advanced-features",
           "label": "Advanced Features"
+        },
+        {
+          "type": "category",
+          "label": "Using OpenAPI",
+          "items": [
+            {
+              "type": "doc",
+              "id": "using-openapi/setup-openapi",
+              "label": "Setup OpenAPI"
+            },
+            {
+              "type": "doc",
+              "id": "using-openapi/writing-openapi",
+              "label": "Writing OpenAPI"
+            },
+            {
+              "type": "doc",
+              "id": "using-openapi/advanced-features",
+              "label": "Advanced Features"
+            }
+          ]
         }
       ]
     }
