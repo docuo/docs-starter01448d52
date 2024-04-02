@@ -71,6 +71,11 @@
           "type": "doc",
           "id": "editing-docs/docs-components",
           "label": "Docs components"
+        },
+        {
+          "type": "doc",
+          "id": "editing-docs/markdown-editor",
+          "label": "Markdown Editor"
         }
       ]
     },
