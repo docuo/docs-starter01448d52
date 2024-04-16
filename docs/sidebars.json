@@ -27,13 +27,13 @@
         },
         {
           "type": "doc",
-          "id": "getting-started/development",
-          "label": "Development"
+          "id": "getting-started/set-up-your-first-project",
+          "label": "Set up your first project"
         },
         {
           "type": "doc",
-          "id": "getting-started/set-up-your-first-project",
-          "label": "Set up your first project"
+          "id": "getting-started/development",
+          "label": "Development"
         },
         {
           "type": "doc",

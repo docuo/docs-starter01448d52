@@ -1,91 +1,96 @@
-# Website
+# Development
 
-This website is built using [Docuo](https://app.spreading.ai/home), a modern static website generator.
+Preview changes locally to update your docs
 
-## Development
+<Tip title="Prerequisite">Please install Node.js (version 19 or higher) before proceeding.</Tip>
 
-Preview changes locally.
+Follow these steps to install and run Docuo on your operating system:
 
-### Installation
-
-Download the Docuo CLI.
-
-```
+**Step 1:** Install Docuo
+<CodeGroup>
+```bash npm
 npm i -g @spreading/docuo
 ```
 
-### Commands
-
-Run the below commands at the root of your Docuo project.
-
-#### `docuo dev`
-
-Run this command to preview changes locally.
-
-##### Custom Ports
-
-Docuo uses port 3000 by default. You can use the `--port` flag to customize the port. For example, use this command to run in port 3333:
-
+```bash yarn
+yarn global add @spreading/docuo
 ```
+</CodeGroup>
+
+**Step 2:** Navigate to the docs directory (where the docuo.config.json file is located) and execute the following command:
+```bash
+docuo dev
+```
+
+## Custom Ports
+
+By default, Docuo uses port 3000. You can customize the port Docuo runs on by using the `--port` flag. To run Docuo on port 3333, for instance, use this command:
+```bash
 docuo dev --port 3333
 ```
 
-#### `docuo build`
+## Clear local build cache
 
-Run this command to check if there were any build error. Fix them and commit your changes to remote repository.
-
-#### `docuo clear`
-
-Run this command to remove local build template cache.
 When you run `docuo dev` for the first time, the build template will be cloned and cached locally.
 As a result, next time you run `docuo dev` will be faster, but the build template is probably out of date.
-So if your local website doesn’t align with the production version, please run this command before you run `docuo dev`.
+So if your local website doesn't align with the production version, please run this command before you run `docuo dev`.
+```bash
+docuo clear
+```
 
-#### `docuo version`
+## Managing docs versions
 
-Run this command to creating or deleting a specified version in the corresponding document instance.
+Run `docuo version` to creating or deleting a specified version in the corresponding document instance. [Read more](../Editing%20docs/Managing%20docs/Docs%20versioning.mdx) .
+```bash example
+docuo version --create 0.1.0
+```
 
-##### Options
+### Options
 
-| Name         | Default     | Required | Description                                                  |
-| ------------ | ----------- | -------- | ------------------------------------------------------------ |
-| `--create`   | `undefined` | `true`   | Create a new version.                                        |
-| `--delete`   | `undefined` | `true`   | Delete specified version, enter the confirmation button as prompted. |
-| `--instance` | `default`   | `false`  | Specifies the document instance of the version to operate on, or uses the default document instance if not specified. |
+| Name         | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| `--create`   | Create a new version.                                        |
+| `--delete`   | Delete specified version, enter the confirmation button as prompted. |
+| `--instance` | Specifies the document instance of the version to operate on, or uses the default document instance if not specified. |
 
-#### `docuo instance`
+## Managing docs instances
 
-Run this command to creating or deleting the specified document instance.
+Run `docuo instance` to creating or deleting the specified document instance. [Read more](../Editing%20docs/Managing%20docs/Docs%20Multi-instance.mdx) .
+```bash example
+docuo instance --create android
+```
 
-##### Options
+### Options
 
-| Name       | Default     | Required | Description                                                  |
-| ---------- | ----------- | -------- | ------------------------------------------------------------ |
-| `--create` | `undefined` | `true`   | A combination of lowercase letters, digits, and underscores is supported.<br />Create a new document instance, you need to be prompted for the values of each option.<br />`label`: The default is instance id<br />`routeBasePath`: The default is instance id<br /> |
-| `--delete` | `undefined` | `true`   | Delete specified document instance, enter the confirmation button as prompted. |
+| Name       | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| `--create` | A combination of lowercase letters, digits, and underscores is supported.<br />Create a new document instance, you need to be prompted for the values of each option.<br />`label`: The default is instance id<br />`routeBasePath`: The default is instance id<br /> |
+| `--delete` | Delete specified document instance, enter the confirmation button as prompted. |
 
-#### `docuo gen-openapi-docs`
+## OpenAPI
 
-Run this command to generate the corresponding mdx documentation according to the specified `OpenAPI` documentation.
+Read more on [OpenAPI configuration](../Using%20OpenAPI/Setup%20OpenAPI.mdx) .
+
+### Generate
+
+Run `docuo gen-openapi-docs` to generate the corresponding mdx documentation according to the specified `OpenAPI` documentation.
 
 This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
 
-The input command will display a list of openapi documents, identified by the `id`. Select the corresponding `id`. The docuo document will be generated internally according to the corresponding `id` configuration.
+The command will list all the configs of `openapi` option, identified by the `id`. Select the corresponding `id`. Then docuo document will be generated internally according to the corresponding `id` configuration.
 
-![img alt](../docs_image/openapi_command.jpeg)
+![img alt](../docs_image/openapi_command.jpg)
 
 <Note>
 `all` is the internal default, indicating that all documents are generated based on all configurations.
 </Note>
 
-[OpenAPI configuration](../Using%20OpenAPI/Setup%20OpenAPI.mdx) is as follows:
-
-<CodeGroup>
+Here is an example: 
  
 ```json docuo.config.json
 {
   "openapi": {
-    "id": {
+    "petstore": {
       "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
       "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
     }
@@ -93,44 +98,26 @@ The input command will display a list of openapi documents, identified by the `i
 }
 ```
 
-</CodeGroup>
+### Clear
 
-#### `docuo clean-openapi-docs`
-
-Run this command to clears the specified `OpenAPI` mdx documentation.
+Run `docuo clean-openapi-docs` to clears the specified `OpenAPI` mdx documentation.
 
 This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
 
-The input command will display a list of openapi documents, identified by the `id`. Select the specified `id` to clear.
+The command will list all the configs of `openapi` option, identified by the `id`. Select the specified `id` to clear.
 
-![img alt](../docs_image/openapi_command.jpeg)
+![img alt](../docs_image/openapi_command_clean.jpg)
 
 <Note>
 `all` is the internal default, indicating clear all.
 </Note>
 
-[OpenAPI configuration](../Using%20OpenAPI/Setup%20OpenAPI.mdx) is as follows:
-
-<CodeGroup>
- 
-```json docuo.config.json
-{
-  "openapi": {
-    "id": {
-      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
-      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
-    }
-  }
-}
-```
-
-</CodeGroup>
 
 ## Deployment
 
 ### Automatically
 
-Install our Github App and turn on the "Auto update" switch on the [Setting page](https://app.spreading.ai/workspace/setting/). Changes will be deployed to production automatically after pushing to the default branch.
+Install our GitHub App and turn on the "Auto update" switch on the [Setting page](https://app.spreading.ai/workspace/setting/). Changes will be deployed to production automatically after pushing to the default branch.
 
 ### Manually
 

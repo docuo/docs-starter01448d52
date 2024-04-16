@@ -45,7 +45,7 @@ So if your local website doesn’t align with the production version, please run
 
 #### Automatically
 
-Install our Github App and turn on the "Auto update" switch on the [Setting page](https://app.spreading.ai/workspace/setting/). Changes will be deployed to production automatically after pushing to the default branch.
+Install our GitHub App and turn on the "Auto update" switch on the [Setting page](https://app.spreading.ai/workspace/setting/). Changes will be deployed to production automatically after pushing to the default branch.
 
 #### Manually
 
