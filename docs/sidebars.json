@@ -76,6 +76,11 @@
           "type": "doc",
           "id": "editing-docs/markdown-editor",
           "label": "Markdown Editor"
+        },
+        {
+          "type": "doc",
+          "id": "editing-docs/vs-code-extension",
+          "label": "VS Code extension"
         }
       ]
     },

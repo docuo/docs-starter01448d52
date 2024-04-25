@@ -1,3 +1,5 @@
+---
+---
 # Customize with json file
 
 <Note title="INFO">
@@ -106,8 +108,7 @@ Example:
     },
     "colorMode": {
       "defaultMode": "light",
-      "disableSwitch": false,
-      "respectPrefersColorScheme": false
+      "disableSwitch": false
     }
   }
 }
@@ -540,11 +541,10 @@ You can customize your color mode within the `colorMode` object.
 
 Accepted fields:
 
-| Name                        | Type                 | Default   | Description                                                                                                               |
-| --------------------------- | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `defaultMode`               | `'light'  \| 'dark'` | `'light'` | The color mode when user first visits the site.                                                                           |
-| `disableSwitch`             | `boolean`            | `false`   | Hides the switch in the navbar. Useful if you want to support a single color mode.                                        |
-| `respectPrefersColorScheme` | `boolean`            | `false`   | Whether to use the prefers-color-scheme media-query, using user system preferences, instead of the hardcoded defaultMode. |
+| Name                        | Type                              | Default   | Description                                                                                                               |
+| --------------------------- | --------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `defaultMode`               | `'light'  \| 'dark'  \| 'system'` | `'light'` | The color mode when user first visits the site.                                                                           |
+| `disableSwitch`             | `boolean`                         | `false`   | Hides the switch in the navbar. Useful if you want to support a single color mode.                                        |
 
 Example configuration:
 
@@ -553,14 +553,11 @@ Example configuration:
   "themeConfig": {
     "colorMode": {
       "defaultMode": "light",
-      "disableSwitch": false,
-      "respectPrefersColorScheme": true
+      "disableSwitch": false
     }
   }
 }
 ```
-
-<Warning title="Warning">With respectPrefersColorScheme: true, the defaultMode is overridden by user system preferences.</Warning>
 
 ### Primary Colors
 
