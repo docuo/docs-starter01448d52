@@ -69,3 +69,15 @@ The search feature will not work reliably until Algolia crawls your site.
 If search doesn't work after any significant change, please use the Algolia dashboard to trigger a new crawl.
 </Warning>
 
+
+## Manage layout
+If you don't need the search function on your website, you can remove the component via `hidden`.
+
+```json docuo.config.json
+{
+  "search": {
+    "hidden": true
+  }
+}
+```
+

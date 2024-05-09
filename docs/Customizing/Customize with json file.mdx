@@ -2,7 +2,7 @@
 
 <Note title="INFO">
   Refer to the Getting Started
-  [**Configuration**](../Getting%20started/Configuration.mdx) for examples.
+  [**Configuration**](../getting-started/configuration.mdx) for examples.
 </Note>
 
 ## Overview
@@ -136,6 +136,29 @@ Path to your site favicon. It must be a URL that can be used in link's href. For
 ```
 
 </CodeGroup>
+
+
+#### Remove watermarks
+
+- Type: `boolean`
+- Default: `false`
+
+You can set whether to remove Docuo watermark on your published website pages via `themeConfig.removeWatermark`. The default setting is `false`, which means keeping watermarks. You need to set it to`true` if you want to remove the watermarks.
+
+Example configuration: 
+
+```json docuo.config.json
+{
+  "themeConfig": {
+    "removeWatermark": true
+  }
+}
+```
+
+<Tip title="Tip">
+Removing Docuo watermark requires **Startup** or **Enterprise** plan. If your current plan is "Free", you need to [make an update](https://app.spreading.ai/plan/).
+</Tip>
+
 
 ## Theme configuration
 
@@ -398,7 +421,9 @@ Accepted fields:
 
 | Name        | Type           | Default     | Description                                                                                                     |
 | ----------- | -------------- | ----------- | --------------------------------------------------------------------------------------------------------------- |
+| `hidden`    | `boolean`      | `false    ` | Whether to hide footer.                                                                                         |
 | `logo`      | `Logo`         | `undefined` | Customization of the logo url. See [Navbar logo](./Customize%20with%20json%20file.mdx#navbar-logo) for details. |
+| `logoUrl`   | `string`       | `undefined` | Link to navigate to when the logo is clicked.                                                                   |
 | `copyright` | `string`       | `undefined` | The copyright message to be displayed at the bottom.                                                            |
 | `caption`   | `string`       | `undefined` | The caption message to be displayed at the bottom.                                                              |
 | `links`     | `FooterLink[]` | `[]`        | The link groups to be present.                                                                                  |
