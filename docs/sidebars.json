@@ -57,20 +57,25 @@
             },
             {
               "type": "doc",
-              "id": "editing-docs/managing-docs/docs-multi-instance",
-              "label": "Docs Multi-instance"
+              "id": "editing-docs/managing-docs/multi-instance",
+              "label": "Multi-instance"
             },
             {
               "type": "doc",
-              "id": "editing-docs/managing-docs/docs-versioning",
-              "label": "Docs versioning"
+              "id": "editing-docs/managing-docs/versioning",
+              "label": "Versioning"
+            },
+            {
+              "type": "doc",
+              "id": "editing-docs/managing-docs/internationalization",
+              "label": "Internationalization"
             }
           ]
         },
         {
           "type": "doc",
-          "id": "editing-docs/docs-components",
-          "label": "Docs components"
+          "id": "editing-docs/components",
+          "label": "Components"
         },
         {
           "type": "doc",
