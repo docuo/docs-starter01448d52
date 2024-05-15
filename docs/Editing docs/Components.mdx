@@ -165,6 +165,66 @@ The rendered output looks like this:
 The rendered output looks like this:
 <Error title="ERROR">This raises a error to watch out for</Error>
 
+## Cards
+
+### Single Card
+
+```markdown
+<Card title="Card title" icon="./lightbulb-solid.svg" href="/overview/introduction">
+  This is a Card example with `href` prop. Clicking will navigate to the `href` refers to.
+</Card>
+```
+
+<Card title="Card title" icon="./lightbulb-solid.svg" href="/overview/introduction">
+  This is a Card example with `href` prop. Clicking me will navigate to the `href` refers to.
+</Card>
+
+#### Props
+| Prop  | Prop type       | Description                                                   |
+| :---- | :-------------- | :------------------------------------------------------------ |
+| title | `string`        | The title of the card.                                        |
+| icon  | `string or svg` | A local path of icon or SVG code in icon=\{\}.                  |
+| href  | `string`        | The url that clicking on the card would navigate the user to. |
+
+### Card Groups
+
+Use `CardGroup` to show cards side by side in a grid format.
+
+```markdown
+<CardGroup cols={2}>
+  <Card title="First Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Second Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Third Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Fourth Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+</CardGroup>
+```
+
+The `CardGroup` component lets you group multiple Card components. It's most often used to put multiple cards in the same column.
+
+<CardGroup cols={2}>
+  <Card title="First Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Second Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Third Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Fourth Card">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+</CardGroup>
+
+
 ## Code blocks
 ### Inline code blocks
 You can enclose the inline code in backticks (e.g., `Docuo`) 
