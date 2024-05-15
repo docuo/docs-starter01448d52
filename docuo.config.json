@@ -93,7 +93,9 @@
           "logo": "GitHub",
           "href": "https://github.com/spreadingai"
         }
-      ]
-    }
+      ],
+      "logoUrl": "https://www.spreading.ai/"
+    },
+    "removeWatermark": false
   }
 }
