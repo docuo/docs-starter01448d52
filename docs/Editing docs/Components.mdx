@@ -128,7 +128,15 @@ The rendered output looks like this:
 
 ## Callouts
 
-There are four types of callouts prepared for you to match different needs, including `<Tip>`, `<Note>`, `<Warning>`, and `<Error>`.
+There are four types of callouts prepared for you to match different needs, including `<Check>`, `<Tip>`, `<Note>`, `<Warning>`, and `<Error>`.
+
+- Check
+```markdown
+<Check title="Check">This adds a check list to confirm</Check>
+```
+
+The rendered output looks like this:
+<Check title="Check">This adds a check list to confirm</Check>
 
 - Tip
 ```markdown
@@ -145,7 +153,6 @@ The rendered output looks like this:
 
 The rendered output looks like this:
 <Note title="Note">This adds a note in the content</Note>
-
 
 
 - Warning
@@ -183,7 +190,7 @@ The rendered output looks like this:
 | Prop  | Prop type       | Description                                                   |
 | :---- | :-------------- | :------------------------------------------------------------ |
 | title | `string`        | The title of the card.                                        |
-| icon  | `string or svg` | A local path of icon or SVG code in icon=\{\}.                  |
+| icon  | `string or svg` | A local path of icon or SVG code in icon=\{\}.                |
 | href  | `string`        | The url that clicking on the card would navigate the user to. |
 
 ### Card Groups
@@ -223,7 +230,6 @@ The `CardGroup` component lets you group multiple Card components. It's most oft
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
   </Card>
 </CardGroup>
-
 
 ## Code blocks
 ### Inline code blocks
