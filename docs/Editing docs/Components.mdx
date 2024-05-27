@@ -231,6 +231,57 @@ The `CardGroup` component lets you group multiple Card components. It's most oft
   </Card>
 </CardGroup>
 
+
+## Steps
+
+Sequence content using the Steps component.
+
+```markdown
+<Steps>
+  <Step title="First Step">
+    These are instructions or content that only pertain to the first step.
+  </Step>
+  <Step title="Second Step">
+    These are instructions or content that only pertain to the second step.
+  </Step>
+  <Step title="Third Step">
+    These are instructions or content that only pertain to the third step.
+  </Step>
+</Steps>
+```
+
+Steps are the best way to display a series of actions of events to your users. You can add as many steps as desired.
+
+<Steps>
+  <Step title="First Step">
+    These are instructions or content that only pertain to the first step.
+  </Step>
+  <Step title="Second Step">
+    These are instructions or content that only pertain to the second step.
+  </Step>
+  <Step title="Third Step">
+    These are instructions or content that only pertain to the third step.
+  </Step>
+</Steps>
+
+
+### Steps Props
+
+| Prop      | Prop type | Description                                                          |
+| :-------- | :-------- | :------------------------------------------------------------------- |
+| titleSize | `string`  | The size of the step titles. One of `p`, `h2` and `h3`. Default: `p` |
+
+### Individual Step Props
+
+| Prop       | Prop type       | Description                                                                                              |
+| :--------- | :-------------- | :------------------------------------------------------------------------------------------------------- |
+| title      | `string`        | The title is the primary text for the step and shows up next to the indicator.                           |
+| icon       | `string or svg` | A local path of icon or SVG code in icon=\{\}.                                                           |
+| stepNumber | `number`        | The number of the step.                                                                                  |
+| titleSize  | `string`        | The size of the step titles. One of `p`, `h2` and `h3`. This value would override `titleSize` of `Steps`. |
+
+
+
 ## Code blocks
 ### Inline code blocks
 You can enclose the inline code in backticks (e.g., `Docuo`) 
