@@ -232,6 +232,120 @@ The `CardGroup` component lets you group multiple Card components. It's most oft
 </CardGroup>
 
 
+## Tabs
+
+Toggle content using the Tabs component, supporting embedding other components. You can add any number of tabs.
+
+
+```markdown
+<Tabs>
+  <Tab title="First Tab">
+    ☝️ Welcome to the content that you can only see inside the first Tab.
+  </Tab>
+  <Tab title="Second Tab">
+    ✌️ Here's the content that's only inside the second Tab.
+  </Tab>
+  <Tab title="Third Tab">
+    💪 Here's the content that's only inside the third Tab.
+  </Tab>
+</Tabs>
+```
+
+The rendered outout looks like this:
+
+<Tabs>
+  <Tab title="First Tab">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
+
+
+### Tab Props
+
+| Prop   | Prop type  | Description                                                 |
+| :----- | :----------| :---------------------------------------------------------- |
+| title  | `string`   | The title of the tab. Short titles are easier to navigate.  |
+
+
+
+## Accordion
+
+A dropdown component for toggling content.
+
+```markdown
+<Accordion title="I am an Accordion." defaultOpen="true">
+  You can put any content in here.
+</Accordion>
+```
+
+The rendered outout looks like this:
+
+<Accordion title="I am an Accordion." defaultOpen="true">
+  You can put any content in here.
+</Accordion>
+
+
+### Accordion Props
+| Prop         | Prop type  | Description                                |
+| :----------- | :--------- | :----------------------------------------- |
+| title        | `string`   | Title in the Accordion preview.            |
+| defaultOpen  | `boolean`  | Whether the Accordion is open by default.  |
+
+
+
+## Button
+
+A clickable button that opens a link when clicked.
+
+- External link
+
+```markdown
+<Button href="https://docuo.spreading.io/editing-docs/components" primary-color="Green" target="_blank">Click me</Button>
+```
+
+- Internal link
+```markdown
+<Button href="./Components.mdx" primary-color="Green" target="_blank">Click me</Button>
+```
+
+The rendered outout looks like this:
+
+<Button href="https://docuo.spreading.io/editing-docs/components" primary-color="Green" target="_blank">Click me</Button>
+
+
+
+### Button Props
+| Prop           | Prop type       | Description                                                                                                                |
+| :------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| href           | `string`        | The url that clicking on the button would navigate the user to.                                                            |
+| primary-color  | `PrimaryColor`  | Button theme color name, refer to the `PrimaryColor` enumeration below.                                                    |
+| target         | `string`        | How to open the link, the default `_blank`, reference https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#target.  |
+
+### Primary Color
+| Name         | Theme color                                                      |
+| :----------- | :--------------------------------------------------------------- |
+| `DarkGray`   | &lcub; "background": "#171717", "color": "#FFFFFF" &rcub;        |
+| `NavyBlue`   | &lcub; "background": "#587FFF", "color": "#FFFFFF" &rcub;        |
+| `Orange`     | &lcub; "background": "#FF9D00", "color": "#FFFFFF" &rcub;        |
+| `Tangerine`  | &lcub; "background": "#FF4400", "color": "#FFFFFF" &rcub;        |
+| `Red`        | &lcub; "background": "#FF0014", "color": "#FFFFFF" &rcub;        |
+| `Magenta`    | &lcub; "background": "#FF00FF", "color": "#FFFFFF" &rcub;        |
+| `Purple`     | &lcub; "background": "#8163F6", "color": "#FFFFFF" &rcub;        |
+| `LightBlue`  | &lcub; "background": "#00B5FF", "color": "#FFFFFF" &rcub;        |
+| `Turquoise`  | &lcub; "background": "#00CAE4", "color": "#FFFFFF" &rcub;        |
+| `Green`      | &lcub; "background": "#00BD46", "color": "#FFFFFF" &rcub;        |
+| `Lime`       | &lcub; "background": "#00A900", "color": "#FFFFFF" &rcub;        |
+| `Gray`       | &lcub; "background": "#777381", "color": "#171717" &rcub;        |
+| `White`      | &lcub; "background": "#FFFFFF", "color": "#171717" &rcub;        |
+
+
+
 ## Steps
 
 Sequence content using the Steps component.
@@ -337,9 +451,6 @@ function MyComponent(props) {
 export default MyComponent;
 ```
 
-
-
-
 You can add more text after the programming language to set the name of your code example. The text can be anything as long as its all in one line.
 ````markdown
 ```javascript helloWorld.js
@@ -349,8 +460,6 @@ console.log("Hello World");
 ```javascript helloWorld.js
 console.log("Hello World");
 ```
-
-
 
 Code blocks show line numbers by default. If you want to hide line numbers, you can add `hideLineNumbers` at the end of the first three backticks.
 
