@@ -45,14 +45,6 @@
           "title": "Product",
           "items": [
             {
-              "label": "Blog",
-              "href": "https://www.spreading.ai/blog"
-            },
-            {
-              "label": "Sign up",
-              "href": "https://app.spreading.ai/signup"
-            },
-            {
               "label": "Log in",
               "href": "https://app.spreading.ai/login"
             }
