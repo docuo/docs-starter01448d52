@@ -41,15 +41,7 @@
       },
       "copyright": "Copyright @2024 SPREADING. All Rights Reserved",
       "links": [
-        {
-          "title": "Product",
-          "items": [
-            {
-              "label": "Log in",
-              "href": "https://app.spreading.ai/login"
-            }
-          ]
-        },
+        
         {
           "title": "Resources",
           "items": [
@@ -68,24 +60,7 @@
           ]
         }
       ],
-      "socials": [
-        {
-          "logo": "Twitter",
-          "href": "https://twitter.com/docuo_team"
-        },
-        {
-          "logo": "LinkedIn",
-          "href": "https://www.linkedin.com/company/spreadingai"
-        },
-        {
-          "logo": "Discord",
-          "href": "https://discord.gg/pgJFhUwzAU"
-        },
-        {
-          "logo": "GitHub",
-          "href": "https://github.com/spreadingai"
-        }
-      ],
+      
       "logoUrl": "https://www.spreading.ai/"
     },
     "removeWatermark": false
