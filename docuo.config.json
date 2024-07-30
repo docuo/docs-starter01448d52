@@ -9,12 +9,19 @@
       "indexName": "uo-spreading"
     }
   },
+
   "themeConfig": {
     "colorMode": {
       "defaultMode": "dark",
       "disableSwitch": false,
       "respectPrefersColorScheme": false
     },
+
+    "colors": {
+      "primaryLight": "#1ABD00",
+      "primaryDark": "#05EC07"
+    },
+
     "navbar": {
       "title": "",
       "logo": {
