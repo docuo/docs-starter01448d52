@@ -14,7 +14,7 @@
       "id": "default",
       "label": "docs",
       "path": "docs",
-      "routeBasePath": "uikit"
+      "routeBasePath": ""
     }
   ],
   "themeConfig": {
