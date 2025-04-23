@@ -76,6 +76,7 @@
 
       "logoUrl": "https://www.spreading.ai/"
     },
-    "removeWatermark": false
+    "removeWatermark": false,
+    "showAskAI": false
   }
 }
